@@ -1,3 +1,7 @@
+def isprime(n: int) -> bool:
+    return True
+
+
 def iseven(n: int) -> bool:
     return n % 2 == 0
 
