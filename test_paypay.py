@@ -18,14 +18,28 @@ prime_cases = [
 
 
 def test_iseven():
-    assert paypay.iseven(1) == False
-    assert paypay.iseven(132461) == False
-    assert paypay.iseven(2.1) == False
-    assert paypay.iseven(2) == True
-    assert paypay.iseven(200) == True
-    assert paypay.iseven(230132) == True
+    assert not paypay.iseven(4)
+    assert not paypay.iseven(1531)
+    assert not paypay.iseven(2.3)
+    assert paypay.iseven(8)
+    assert paypay.iseven(200)
+    assert paypay.iseven(230132)
 
 
 @pytest.mark.parametrize('test_input, expected', prime_cases)
 def test_isprime(test_input, expected):
     assert paypay.isprime(test_input) == expected
+
+
+def test_sqrt_negative():
+    with pytest.raises(ValueError):
+        paypay.sqrt(-1)
+
+
+@pytest.mark.parametrize('word, palindrome', [('holi', False),
+                                              ('Python', False),
+                                              ('dabalearrozalazorraelabad', True),
+                                              ('dabale arroz a la zorra el abad', False),
+                                              ('Bob', True)])
+def test_ispalindrome(word, palindrome):
+    assert paypay.ispalindrome(word) == palindrome

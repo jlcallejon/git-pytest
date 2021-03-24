@@ -6,7 +6,7 @@ def iseven(n: int) -> bool:
     return n % 2 == 0
 
 
-def sqrt(n: float, threshold: 1e-3) -> float:
+def sqrt(n: float, threshold=1e-3) -> float:
 
     A = n
     L = A
@@ -17,3 +17,7 @@ def sqrt(n: float, threshold: 1e-3) -> float:
         W = A / L
 
     return L
+
+def ispalindrome(word):
+    return None
+
