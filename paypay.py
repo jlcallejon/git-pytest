@@ -4,12 +4,14 @@ def iseven(n: int) -> bool:
 
 def sqrt(n: float, threshold: 1e-3) -> float:
 
-    A = n
-    L = A
-    W = A / L
+    L = n
+    W = n / L
 
-    while (W - L) / L > threshold:
+    rel_error = abs(L - W) / L
+
+    while rel_error > threshold:
         L = (L + W) / 2
-        W = A / L
+        W = n / L
+        rel_error = abs(L - W) / L
 
     return L
