@@ -8,7 +8,7 @@ This repo is very tame and does not hide any secret whatsoever.
 
 - Daniel Mateos
 - Jose Luis Callejón
-
+- david lopez
 
 # Libraries needed
 
