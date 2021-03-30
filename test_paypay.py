@@ -7,3 +7,6 @@ def test_iseven():
     assert paypay.iseven(2)
     assert paypay.iseven(200)
     assert paypay.iseven(230132)
+
+def test_sqrt():
+    assert abs(paypay.sqrt(81, 1e-3) - 9) < 1e-3
