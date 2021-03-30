@@ -7,8 +7,10 @@ This repo is very tame and does not hide any secret whatsoever.
 # Contributors
 
 - Daniel Mateos
+- Jose Luis Callejón
 
 
 # Libraries needed
 
 - pytest
+
